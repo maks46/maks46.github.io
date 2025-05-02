@@ -593,18 +593,18 @@ main .zamer .form form input {
     padding: 0 16px;
     margin-bottom: 12px
 }
-main .potolki-for {
+main .balcony-for {
     padding-top: 80px;
     padding-bottom: 80px
 }
-main .potolki-for h2 {
+main .balcony-for h2 {
     color: #003955;
     font-size: 36px;
     text-transform: uppercase;
     margin-bottom: 30px;
     text-align: center
 }
-main .potolki-for .grid {
+main .balcony-for .grid {
     display: grid;
     grid-template-columns: repeat(3, 370px);
     -webkit-box-pack: justify;
@@ -613,14 +613,14 @@ main .potolki-for .grid {
     justify-content: space-between;
     grid-row-gap: 30px
 }
-main .potolki-for .item {
+main .balcony-for .item {
     text-align: center
 }
-main .potolki-for .item img {
+main .balcony-for .item img {
     display: block;
     margin-bottom: 15px
 }
-main .potolki-for .item span {
+main .balcony-for .item span {
     display: block;
     font-size: 24px;
     text-transform: uppercase;
@@ -1021,7 +1021,7 @@ footer a img {
         justify-content: center;
         grid-gap: 30px 50px
     }
-    main .potolki-for .grid {
+    main .balcony-for .grid {
         grid-template-columns: repeat(2, 370px);
         -webkit-box-pack: center;
         -webkit-justify-content: center;
@@ -1090,10 +1090,10 @@ footer a img {
         margin-right: auto;
         margin-top: 30px
     }
-    main .potolki-for .grid {
+    main .balcony-for .grid {
         grid-template-columns: repeat(2, 1fr)
     }
-    main .potolki-for .item img {
+    main .balcony-for .item img {
         width: 100%
     }
     main .ask .ask-blocks {
@@ -1166,7 +1166,7 @@ footer a img {
         font-size: 49px;
         text-align: center
     }
-    main .potolki-for .grid {
+    main .balcony-for .grid {
         grid-gap: 30px 20px
     }
     main .ask {
@@ -1414,13 +1414,13 @@ footer a img {
     main .zamer .form span {
         font-size: 16px
     }
-    main .potolki-for h2 {
+    main .balcony-for h2 {
         font-size: 32px
     }
-    main .potolki-for .grid {
+    main .balcony-for .grid {
         grid-template-columns: 1fr
     }
-    main .potolki-for {
+    main .balcony-for {
         padding-top: 70px;
         padding-bottom: 70px
     }
@@ -1615,4 +1615,10 @@ footer a img {
 }
 .modal .close:hover {
     opacity: .85
+}
+
+.examples {
+    max-height: 40em;
+    max-width: 100%;
+    margin: 0 auto
 }

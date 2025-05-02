@@ -1,23 +1,4 @@
 $(function() {
-	$('#square').keyup(function(){
-		var square = $(this).val();
-		$('#price').val(square*1100)
-	});
-	$('#price').keyup(function(){
-		var price = $(this).val();
-		$('#square').val((price/1100).toFixed(2))
-	});
-
-	$('.ask-blocks .item h4').click(function(){
-		var thisH4 = $(this),
-			thisSpan = $('div', $(this).parent()),
-			outherH4 = $('.ask-blocks .item h4').not(thisH4),
-			outherSpan = $('.ask-blocks .item div').not(thisSpan);
-		outherH4.removeClass('active');
-		outherSpan.hide().removeClass('active');
-		thisH4.toggleClass('active');
-		thisSpan.fadeToggle().toggleClass('active');
-	});
     ymaps.ready(init);
     var myMap, 
         myPlacemark;
@@ -25,19 +6,19 @@ $(function() {
     function init(){ 
 		if( ($(window).width() <= 767)  ) {
 	        myMap = new ymaps.Map("map", {
-		            center: [55.75399400, 37.62209300],
-		            zoom: 8
+		            center: [51.731399, 36.194278],
+		            zoom: 15
 		        }); 
 		} else {
 	        myMap = new ymaps.Map("map", {
-	            center: [55.75399400, 37.62209300],
-	            zoom: 8
+	            center: [51.731399, 36.194278],
+	            zoom: 15
 	        }); 			
 		}
 
-        myPlacemark = new ymaps.Placemark([55.75399400, 37.62209300], {
-            hintContent: 'Алматы',
-            balloonContent: 'г. Алматы, пр. Достык, д. 291/3'
+        myPlacemark = new ymaps.Placemark([51.731399, 36.194278], {
+            hintContent: 'Курск',
+            balloonContent: 'г. Курск, ул. Красная площадь, д. 1'
         });
         myMap.geoObjects.add(myPlacemark);
     }
@@ -79,35 +60,9 @@ $(function() {
         }, 1000);
     });
 
-	$('.modal').on('hidden.bs.modal', function (e) {
-	  $('input:not(.type)', $(this)).val('');
-	});
-	$('form').submit(function(e){
-	    e.preventDefault();
-		var form_data = {
-			'name':$(".name", $(this)).val(),
-			'tel':$(".tel", $(this)).val(),
-			'price':$("#price", $(this)).val(),
-			'square':$("#square", $(this)).val(),
-			'type':$(".type", $(this)).val()
-		};
-		$.ajax({
-		  type: "POST",
-		  url: "mail.php",
-		  data: form_data,
-		  success: function(){
-		    $('.modal').modal('hide');
-		    setTimeout(function() {
-		    	$('.success').fadeToggle();
-		    }, 1000);
-		    setTimeout(function() {
-		    	$('.success').fadeToggle();
-		    }, 2500);
-		  },
-		  error: function() {
-		  	alert("Произошла какая то ошибка!");
-		  }
-		}); 
-	});
 	new WOW().init();
+	Fancybox.bind("[data-fancybox]", {
+		// Your custom options
+	  });
+
 });
